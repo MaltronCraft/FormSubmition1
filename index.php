@@ -15,17 +15,17 @@
 
 			<header>Name</header>
 			<p>
-				<b>First Name:</b> <input type="text" name="yourname" /><br />
-				<b>Middle Initial:</b> <input type="text" name="yourname" /><br />
-				<b>Last Name:</b> <input type="text" name="yourname" /><br />
-				<b>Email:</b> <input type="text" name="yourname" /><br />
-				<b>Phone Number:</b> <input type="text" name="yourname" /><br />
+				<b>First Name:</b> <input type="text" name="firstName" /><br />
+				<b>Middle Initial:</b> <input type="text" name="middleInitial" /><br />
+				<b>Last Name:</b> <input type="text" name="lastName" /><br />
+				<b>Email:</b> <input type="text" name="email" /><br />
+				<b>Phone Number:</b> <input type="text" name="number" /><br />
 			</p>
 
 			<header>Address</header>
 			<p>
-				<b>Street:</b> <input type="text" name="yourname" /><br />
-				<b>City:</b> <input type="text" name="yourname" /><br />
+				<b>Street:</b> <input type="text" name="street" /><br />
+				<b>City:</b> <input type="text" name="city" /><br />
 				<b>State:</b> 
 					<select name="State">
  					<option value="Alabama">Alabama</option>
@@ -84,33 +84,44 @@
 
 			<header>Department</header>
 			<p>
-				<input type="radio" name="gender" value="male" checked> Development<br>
-				<input type="radio" name="gender" value="male" checked> Sales<br>
-				<input type="radio" name="gender" value="male" checked> Project Management<br>
-				<input type="radio" name="gender" value="male" checked> Design<br>
-				<input type="radio" name="gender" value="male" checked> Marketing<br>
-				<input type="radio" name="gender" value="male" checked> SalesBuddy<br>
+				<input type="radio" name="department" value="Development" checked> Development<br>
+				<input type="radio" name="department" value="Sales" checked> Sales<br>
+				<input type="radio" name="department" value="Management" checked> Project Management<br>
+				<input type="radio" name="department" value="Design" checked> Design<br>
+				<input type="radio" name="department" value="Marketing" checked> Marketing<br>
+				<input type="radio" name="department" value="SalesBuddy" checked> SalesBuddy<br>
 			</p>
 
 			<header>Areas of Intrest</header>
 			<p>	
-				<input type="checkbox" name="Intrest" value="Reading">I like to read.<br>
-				<input type="checkbox" name="Intrest" value="Reading">I like to draw.<br>
-				<input type="checkbox" name="Intrest" value="Reading">I like to play video games.<br>
-				<input type="checkbox" name="Intrest" value="Reading">I like computers.<br>
-				<input type="checkbox" name="Intrest" value="Reading">I like sports.<br>
-				<input type="checkbox" name="Intrest" value="Reading">I like cars.<br>
-				<input type="checkbox" name="Intrest" value="Reading">I like politics.<br>
+				<input type="checkbox" name="Intrest" value="reading">I like to read.<br>
+				<input type="checkbox" name="Intrest" value="drawing">I like to draw.<br>
+				<input type="checkbox" name="Intrest" value="videoGames">I like to play video games.<br>
+				<input type="checkbox" name="Intrest" value="computers">I like computers.<br>
+				<input type="checkbox" name="Intrest" value="sports">I like sports.<br>
+				<input type="checkbox" name="Intrest" value="cars">I like cars.<br>
+				<input type="checkbox" name="Intrest" value="politics">I like politics.<br>
 			</p>
 
 
-			<p>Additional Information: <input type="text" name="yourname" /><br /></p>
+			<p>Additional Information: <input type="text" name="extra" /><br /></p>
 
 			<input type="submit" value="Submit">
 
 			</form>
 
 		</div>
+
+
+		<?php
+			$firstName = check_input($_POST['firstName'], "Enter your first name");
+			$middleInitial = check_input($_POST['middleInitial'], "Enter your middle initial");
+			$lastName = check_input($_POST['lastName'], "Enter your last name");
+			$street = check_input($_POST['street'], "Enter your street");
+			$City = check_input($_POST['city'], "Enter your city");
+			$state = check_input($_POST['state'], "Enter your state");
+			$zip = check_input($_POST['zip'], "Enter your zip code");
+		?>
 
 	</body>
 
