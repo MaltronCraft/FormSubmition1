@@ -6,13 +6,14 @@
 
 	<body>
 
-		<header>
+		<header id = main>
+			<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 			Please Fill Out Form
 		</header>
 
 		<div>
 			<form action="contact.php" method="post">
-
+			<p></p>
 			<header>Name</header>
 			<p>
 				<b>First Name:</b> <input type="text" name="firstName" /><br />
