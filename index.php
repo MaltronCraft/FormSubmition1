@@ -11,6 +11,9 @@
 			Please Fill Out Form
 		</header>
 
+		<div id = "bar">
+		</div>
+
 		<div id = "instructionsDiv">
 			<header id="requiredInstructions">Required feilds are <b>bold</b>.</header>
 			<form action="contact.php" method="post">
@@ -123,7 +126,9 @@
 			<input id="submit" type="submit" value="Submit">
 		</div>	
 
-			</form>
+
+
+		</form>
 
 
 
