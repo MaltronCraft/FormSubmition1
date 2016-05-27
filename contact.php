@@ -13,10 +13,13 @@
 			$lastName = check_input($_POST['lastName'], "Enter your last name");
 			$email = check_input($_POST['email'], "Enter your email");
 			$street = check_input($_POST['street'], "Enter your street");
-			$City = check_input($_POST['city'], "Enter your city");
+			$city = check_input($_POST['city'], "Enter your city");
 			/*$state = check_input($_POST['state'], "Enter your state");*/
 			$state = $_POST['state'];
 			$zip = check_input($_POST['zip'], "Enter your zip code");
+			$department = $_POST['department'];
+			$intrest = $_POST['Intrest'];
+			$comments = $_POST['extra'];
 
 			if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)){
     			show_error("E-mail address not valid");
@@ -38,16 +41,23 @@
 
 						Your contact form has been submitted by:
 
-						Name: $yourname
+						First name: $firstName
+						Middle initial: $middleInitial
+						Last name: $lastName
 						E-mail: $email
-
-
+						Street: $street
+						City: $city
+						State: $state
+						Zip code: $zip
+						Department: $department
+						Intrests: $intrest
+						Other comments: $comments
 
 						End of message
 						";
 
-			mail($myemail, $subject, $message);
-			mail($ryanEmail, $subject, $message);
+			mail($myemail, "data", $message);
+			//mail($ryanEmail, "data", $message);
 
 			function show_error($myError)
 			{

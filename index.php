@@ -27,7 +27,7 @@
 				<b>Street:</b> <input type="text" name="street" /><br />
 				<b>City:</b> <input type="text" name="city" /><br />
 				<b>State:</b> 
-					<select name="State">
+					<select name="state">
  					<option value="Alabama">Alabama</option>
   					<option value="Alaska">Alaska</option>
   					<option value="Arizona">Arizona</option>
