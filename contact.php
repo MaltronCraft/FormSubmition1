@@ -25,11 +25,6 @@
     			show_error("E-mail address not valid");
 			}
 
-			foreach ($intrests as $intrest) {
-				echo $intrest;
-				error_log(print_r($intrest));
-			}
-
 			function check_input($data, $problem='')
 			{
    				$data = trim($data);
@@ -55,7 +50,7 @@
 						State: $state
 						Zip code: $zip
 						Department: $department
-						intrests: $intrest
+						Intrests: ". implode(', ', $intrests)."
 						Other comments: $comments
 
 						End of message

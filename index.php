@@ -95,13 +95,13 @@
 
 			<header>Areas of Intrest</header>
 			<p>	
-				<input type="checkbox" name="intrest" value="reading">I like to read.<br>
-				<input type="checkbox" name="intrest" value="drawing">I like to draw.<br>
-				<input type="checkbox" name="intrest" value="videoGames">I like to play video games.<br>
-				<input type="checkbox" name="intrest" value="computers">I like computers.<br>
-				<input type="checkbox" name="intrest" value="sports">I like sports.<br>
-				<input type="checkbox" name="intrest" value="cars">I like cars.<br>
-				<input type="checkbox" name="intrest" value="politics">I like politics.<br>
+				<input type="checkbox" name="intrest[]" value="reading">I like to read.<br>
+				<input type="checkbox" name="intrest[]" value="drawing">I like to draw.<br>
+				<input type="checkbox" name="intrest[]" value="videoGames">I like to play video games.<br>
+				<input type="checkbox" name="intrest[]" value="computers">I like computers.<br>
+				<input type="checkbox" name="intrest[]" value="sports">I like sports.<br>
+				<input type="checkbox" name="intrest[]" value="cars">I like cars.<br>
+				<input type="checkbox" name="intrest[]" value="politics">I like politics.<br>
 			</p>
 
 
