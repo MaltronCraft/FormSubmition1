@@ -28,6 +28,7 @@
 				<b>City:</b> <input type="text" name="city" /><br />
 				<b>State:</b> 
 					<select name="state">
+					<option value="">--Select a state--</option>
  					<option value="Alabama">Alabama</option>
   					<option value="Alaska">Alaska</option>
   					<option value="Arizona">Arizona</option>
@@ -94,13 +95,13 @@
 
 			<header>Areas of Intrest</header>
 			<p>	
-				<input type="checkbox" name="Intrest" value="reading">I like to read.<br>
-				<input type="checkbox" name="Intrest" value="drawing">I like to draw.<br>
-				<input type="checkbox" name="Intrest" value="videoGames">I like to play video games.<br>
-				<input type="checkbox" name="Intrest" value="computers">I like computers.<br>
-				<input type="checkbox" name="Intrest" value="sports">I like sports.<br>
-				<input type="checkbox" name="Intrest" value="cars">I like cars.<br>
-				<input type="checkbox" name="Intrest" value="politics">I like politics.<br>
+				<input type="checkbox" name="intrest" value="reading">I like to read.<br>
+				<input type="checkbox" name="intrest" value="drawing">I like to draw.<br>
+				<input type="checkbox" name="intrest" value="videoGames">I like to play video games.<br>
+				<input type="checkbox" name="intrest" value="computers">I like computers.<br>
+				<input type="checkbox" name="intrest" value="sports">I like sports.<br>
+				<input type="checkbox" name="intrest" value="cars">I like cars.<br>
+				<input type="checkbox" name="intrest" value="politics">I like politics.<br>
 			</p>
 
 

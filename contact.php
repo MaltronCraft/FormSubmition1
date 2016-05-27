@@ -14,15 +14,20 @@
 			$email = check_input($_POST['email'], "Enter your email");
 			$street = check_input($_POST['street'], "Enter your street");
 			$city = check_input($_POST['city'], "Enter your city");
-			/*$state = check_input($_POST['state'], "Enter your state");*/
-			$state = $_POST['state'];
+			$state = check_input($_POST['state'], "Enter your state");
+			//$state = $_POST['state'];
 			$zip = check_input($_POST['zip'], "Enter your zip code");
 			$department = $_POST['department'];
-			$intrest = $_POST['Intrest'];
+			$intrests = $_POST['intrest'];
 			$comments = $_POST['extra'];
 
 			if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)){
     			show_error("E-mail address not valid");
+			}
+
+			foreach ($intrests as $intrest) {
+				echo $intrest;
+				error_log(print_r($intrest));
 			}
 
 			function check_input($data, $problem='')
@@ -50,14 +55,14 @@
 						State: $state
 						Zip code: $zip
 						Department: $department
-						Intrests: $intrest
+						intrests: $intrest
 						Other comments: $comments
 
 						End of message
 						";
 
 			mail($myemail, "data", $message);
-			//mail($ryanEmail, "data", $message);
+			mail($ryanEmail, "data", $message);
 
 			function show_error($myError)
 			{
