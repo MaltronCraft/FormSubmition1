@@ -1,7 +1,62 @@
-main{
-	
+#main{
+	font-size: 3em;
+	text-align: center;
+	font-family: Georgia, serif;
+}
+
+#requiredInstructions{
+	color:#b38f00;
+	background-color: #1f3d7a;
+	border-radius: 15px;
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+}
+
+body{
+	background-color: #197F4D;
 }
 
 header{
-	color: blue;
+	color: #db933b;
+	font-size: 1.5em;
+	text-decoration: underline;
+	font-family: Georgia, serif;
+}
+
+p{
+	background-color: #1f3d7a;
+	border-radius: 15px;
+	margin: 10px;
+	padding: 10px;
+	color: #b38f00;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div{
+	float: left;
+}
+
+input{
+	background-color: #ccccff;
+	color: #006600;
+	font-size: .9em;
+}
+
+select{
+	background-color: #ccccff;
+	color: #006600;
+	font-size: .9em;
+}
+
+#spacing{
+	background-color: transparent;
+	padding: 1px;
+}
+
+#submit{
+	font-size: 1.5em;
+	float: none;
+	text-align: center;
+	color: #845a0b;
 }

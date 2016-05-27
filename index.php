@@ -12,8 +12,10 @@
 		</header>
 
 		<div>
+			<p id = spacing></p>
+			<header id="requiredInstructions">Required feilds are <b>bold</b>.</header>
 			<form action="contact.php" method="post">
-			<p></p>
+			<p id = spacing></p>
 			<header>Name</header>
 			<p>
 				<b>First Name:</b> <input type="text" name="firstName" /><br />
@@ -108,9 +110,15 @@
 
 			<p>Additional Information: <input type="text" name="extra" /><br /></p>
 
-			<input type="submit" value="Submit">
+			<div id="submit">
+				<input id="submit" type="submit" value="Submit">
+			<div>	
 
 			</form>
+
+			<div id = "randomBar">
+				
+			</div>
 
 		</div>
 
