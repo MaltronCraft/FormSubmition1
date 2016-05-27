@@ -11,22 +11,25 @@
 			Please Fill Out Form
 		</header>
 
-		<div>
-			<p id = spacing></p>
+		<div id = "instructionsDiv">
 			<header id="requiredInstructions">Required feilds are <b>bold</b>.</header>
 			<form action="contact.php" method="post">
-			<p id = spacing></p>
-			<header>Name</header>
-			<p>
+		</div>
+		
+		<div>	
+			<header id = left>Name</header>
+			<p id = left>
 				<b>First Name:</b> <input type="text" name="firstName" /><br />
 				<b>Middle Initial:</b> <input type="text" name="middleInitial" /><br />
 				<b>Last Name:</b> <input type="text" name="lastName" /><br />
 				<b>Email:</b> <input type="text" name="email" /><br />
 				<b>Phone Number:</b> <input type="text" name="number" /><br />
 			</p>
+		</div>
 
-			<header>Address</header>
-			<p>
+		<div>
+			<header id = right>Address</header>
+			<p id = right>
 				<b>Street:</b> <input type="text" name="street" /><br />
 				<b>City:</b> <input type="text" name="city" /><br />
 				<b>State:</b> 
@@ -85,9 +88,11 @@
 					</select><br />
 				<b>Zip Code:</b> <input type="text" name="zip" /><br />
 			</p>	
+		</div>
 
-			<header>Department</header>
-			<p>
+		<div>
+			<header id = left>Department</header>
+			<p id = left>
 				<input type="radio" name="department" value="Development" checked> Development<br>
 				<input type="radio" name="department" value="Sales" checked> Sales<br>
 				<input type="radio" name="department" value="Management" checked> Project Management<br>
@@ -95,9 +100,11 @@
 				<input type="radio" name="department" value="Marketing" checked> Marketing<br>
 				<input type="radio" name="department" value="SalesBuddy" checked> SalesBuddy<br>
 			</p>
+		</div>
 
-			<header>Areas of Intrest</header>
-			<p>	
+		<div>
+			<header id = right>Areas of Intrest</header>
+			<p id = right>	
 				<input type="checkbox" name="intrest[]" value="reading">I like to read.<br>
 				<input type="checkbox" name="intrest[]" value="drawing">I like to draw.<br>
 				<input type="checkbox" name="intrest[]" value="videoGames">I like to play video games.<br>
@@ -106,21 +113,19 @@
 				<input type="checkbox" name="intrest[]" value="cars">I like cars.<br>
 				<input type="checkbox" name="intrest[]" value="politics">I like politics.<br>
 			</p>
+		</div>
 
+		<div>
+			<p id = left>Additional Information: <input type="text" name="extra" /><br /></p>
+		</div>
 
-			<p>Additional Information: <input type="text" name="extra" /><br /></p>
-
-			<div id="submit">
-				<input id="submit" type="submit" value="Submit">
-			<div>	
+		<div id="submit">
+			<input id="submit" type="submit" value="Submit">
+		</div>	
 
 			</form>
 
-			<div id = "randomBar">
-				
-			</div>
 
-		</div>
 
 
 
