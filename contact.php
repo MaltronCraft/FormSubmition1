@@ -246,7 +246,7 @@
 				<b>Street:</b> <input id = <?php if (empty($street))echo "red"; ?> type="text" name="street" VALUE="<?php print $street; ?>"/><br />
 				<b>City:</b> <input id = <?php if (empty($city))echo "red"; ?> type="text" name="city" VALUE="<?php print $city; ?>"/><br />
 				<b>State:</b> 
-					<select  name="state">
+					<select id = <?php if (empty($_POST['state']))echo "red"; ?> name="state">
 					<option value="">--Select a state--</option>
  					<option value="Alabama">Alabama</option>
   					<option value="Alaska">Alaska</option>
