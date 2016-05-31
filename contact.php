@@ -232,19 +232,19 @@
 
 			<header id = left>Name</header>
 			<p id = left>
-				<b>First Name:</b> <input type="text" name="firstName" VALUE="<?php print $firstName; ?>"/><br />
-				<b>Middle Initial:</b> <input  id = last type="text" name="middleInitial" VALUE="<?php print $middleInitial; ?>"/><br />
-				<b>Last Name:</b> <input id = middle type="text" name="lastName" VALUE="<?php print $lastName; ?>"/><br />
-				<b>Email:</b> <input  id = emial type="text" name="email" VALUE="<?php print $email; ?>"/><br />
-				<b>Phone Number:</b> <input id = number type="text" name="number" VALUE="<?php print $number; ?>"/><br />
+				<b>First Name:</b> <input id = <?php if (empty($firstName))echo "red"; ?> type="text" name="firstName" VALUE="<?php print $firstName; ?>"/><br />
+				<b>Middle Initial:</b> <input  id = <?php if (empty($middleInitial))echo "red"; ?> type="text" name="middleInitial" VALUE="<?php print $middleInitial; ?>"/><br />
+				<b>Last Name:</b> <input id = <?php if (empty($lastName))echo "red"; ?> type="text" name="lastName" VALUE="<?php print $lastName; ?>"/><br />
+				<b>Email:</b> <input  id = <?php if (empty($email))echo "red"; ?> type="text" name="email" VALUE="<?php print $email; ?>"/><br />
+				<b>Phone Number:</b> <input id = <?php if (empty($number))echo "red"; ?> type="text" name="number" VALUE="<?php print $number; ?>"/><br />
 			</p>
 		</div>
 
 		<div>
 			<header id = right>Address</header>
 			<p id = right>
-				<b>Street:</b> <input type="text" name="street" VALUE="<?php print $street; ?>"/><br />
-				<b>City:</b> <input type="text" name="city" VALUE="<?php print $city; ?>"/><br />
+				<b>Street:</b> <input id = <?php if (empty($street))echo "red"; ?> type="text" name="street" VALUE="<?php print $street; ?>"/><br />
+				<b>City:</b> <input id = <?php if (empty($city))echo "red"; ?> type="text" name="city" VALUE="<?php print $city; ?>"/><br />
 				<b>State:</b> 
 					<select  name="state">
 					<option value="">--Select a state--</option>
@@ -299,7 +299,7 @@
   					<option value="Wisconsin">Wisconsin</option>
   					<option value="Wyoming">Wyoming</option>
 					</select><br />
-				<b>Zip Code:</b> <input type="text" name="zip" VALUE="<?php print $zip; ?>"/><br />
+				<b>Zip Code:</b> <input id = <?php if (empty($zip))echo "red"; ?> type="text" name="zip" VALUE="<?php print $zip; ?>"/><br />
 			</p>	
 		</div>
 
