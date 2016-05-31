@@ -36,10 +36,18 @@
 
 
 			/*if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)){
-    			$error("E-mail address not valid");
+    			error_log("E-mail address not valid");
 			}*/
 
-/*
+
+			if(empty($firstName)||empty($middleInitial)||empty($lastName)||empty($email)||empty($street)||empty($city)||empty($state)||empty($zip)){
+				echo 'please fil in all of the feilds';
+				return false;
+			}
+
+
+
+			/*
 		$firstName = "";
 		$error_css = "";
 
@@ -94,12 +102,12 @@
 			mail($myemail, "data", $message);
 			mail($ryanEmail, "data", $message);
 
-			/*function died($error) {
+			function died($error) {
    				session_start();
     			$_SESSION['error'] = $error;
     			header('Location: index.php');
    				die();
-			}*/
+			}
 
 			/*session_start();
 			if (isset($_SESSION['error']['email'])) {
@@ -126,4 +134,3 @@
 			}	*/
 		?>
 
-		

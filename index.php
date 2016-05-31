@@ -28,23 +28,24 @@
 		</div>
 
 
-		<!--<?php
+		<?php
 			//$first = aqua;
-			$middle = aqua;
-			$last = aqua;
-			$email = aqua;
-			$number = aqua;
-			$street = aqua;
-			$city = aqua;
-			$state = aqua;
-			$zip = aqua;
-		?>	-->
+			//$middle = aqua;
+			//$last = aqua;
+			//$email = aqua;
+			//$number = aqua;
+			//$street = aqua;
+			//$city = aqua;
+			//$state = aqua;
+			//$zip = aqua;
+		?>	
 
 		<div>	
 
 			<header id = left>Name</header>
 			<p id = left>
 				<b>First Name:</b> <input type="text" name="firstName" /><br />
+				<span class="error">* <?php echo $nameErr;?></span>
 				<b>Middle Initial:</b> <input  id = last type="text" name="middleInitial" /><br />
 				<b>Last Name:</b> <input id = middle type="text" name="lastName" /><br />
 				<b>Email:</b> <input  id = emial type="text" name="email" /><br />
