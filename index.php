@@ -24,17 +24,31 @@
 
 		<div id = "instructionsDiv">
 			<header id="requiredInstructions">Required feilds are <b>bold</b>.</header>
-			<form action="contact.php" method="post">
+			<form action= "contact.php"  method="post">
 		</div>
-		
+
+
+		<!--<?php
+			//$first = aqua;
+			$middle = aqua;
+			$last = aqua;
+			$email = aqua;
+			$number = aqua;
+			$street = aqua;
+			$city = aqua;
+			$state = aqua;
+			$zip = aqua;
+		?>	-->
+
 		<div>	
+
 			<header id = left>Name</header>
 			<p id = left>
 				<b>First Name:</b> <input type="text" name="firstName" /><br />
-				<b>Middle Initial:</b> <input type="text" name="middleInitial" /><br />
-				<b>Last Name:</b> <input type="text" name="lastName" /><br />
-				<b>Email:</b> <input type="text" name="email" /><br />
-				<b>Phone Number:</b> <input type="text" name="number" /><br />
+				<b>Middle Initial:</b> <input  id = last type="text" name="middleInitial" /><br />
+				<b>Last Name:</b> <input id = middle type="text" name="lastName" /><br />
+				<b>Email:</b> <input  id = emial type="text" name="email" /><br />
+				<b>Phone Number:</b> <input id = number type="text" name="number" /><br />
 			</p>
 		</div>
 
@@ -44,7 +58,7 @@
 				<b>Street:</b> <input type="text" name="street" /><br />
 				<b>City:</b> <input type="text" name="city" /><br />
 				<b>State:</b> 
-					<select name="state">
+					<select  name="state">
 					<option value="">--Select a state--</option>
  					<option value="Alabama">Alabama</option>
   					<option value="Alaska">Alaska</option>
@@ -146,5 +160,156 @@
 
 
 	</body>
+
+	<!--<?php
+			function test(){
+				echo "sigh";
+			}
+			/*error_log("Before Sending Email");
+			mail("mgoldberg@launchdm.com", "Test e-mail", "Hi, this is a test message!");
+			use command shift r to hard refresh
+			error_log("After Sending Email");*/
+
+			$myemail  = "mgoldberg@launchdm.com";
+			$ryanEmail  = "ryan@launchdm.com";
+
+			$firstName  = "a";
+			$middleInit = $_POST['middleInitial'];
+			$lastName = $_POST['lastName'];
+			$email = $_POST['email'];
+			$street = $_POST['street'];
+			$city = $_POST['city'];
+			$state = $_POST['state'];
+			$zip = $_POST['zip'];
+			$department = $_POST['department'];
+			$intrests = $_POST['intrests'];
+			$comments = $_POST['comments'];
+			$intrests = $_POST['intrests'];
+
+			function submitted(){	
+				$firstName = check_input($_POST['firstName'], "Enter your first name", "firstName");
+				$middleInitial = check_input($_POST['middleInitial'], "Enter your middle initial", "middleInitial");
+				$lastName = check_input($_POST['lastName'], "Enter your last name", "lastName");
+				$email = check_input($_POST['email'], "Enter your email", "email");
+				$street = check_input($_POST['street'], "Enter your street", "street");
+				$city = check_input($_POST['city'], "Enter your city", "city");
+				$state = check_input($_POST['state'], "Enter your state", "state");
+				//$state = $_POST['state'];
+				$zip = check_input($_POST['zip'], "Enter your zip code", "zip");
+				$department = $_POST['department'];
+				$intrests = $_POST['intrest'];
+				$comments = $_POST['extra'];
+
+				senmdMail();
+			}
+
+			function check_input($data, $problem='', $dataType)
+			{
+				$data = trim($data);
+    			$data = stripslashes($data);
+   				$data = htmlspecialchars($data);
+   				if($data == NULL){
+   					if($dataType == "firstName"){
+   						//$first = red;
+   					}
+   				}else{
+   					return $data;
+   				}
+			}
+
+
+			/*if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)){
+    			$error("E-mail address not valid");
+			}*/
+
+/*
+		$firstName = "";
+		$error_css = "";
+
+		if (isset($_POST['submit'])) {
+   			if(isset($_POST['firstName']))
+        		$firstName = $_POST['firstName'];
+    		else
+        		$error_css='background-color:red';
+		}
+
+/*?>
+
+<label for="username">Username:</label>
+<input id="username" type="text" value="<?php echo $username; ?>" name="username" title='Username' style="<?php echo $error_css; ?>"/>*/
+
+			/*function check_input($data, $problem='')
+			{
+   				$data = trim($data);
+    			$data = stripslashes($data);
+   				$data = htmlspecialchars($data);
+   				if ($problem && strlen($data) == 0)
+    			{
+       				show_error($problem);
+    			}
+    			return $data;
+			}
+
+			if (count($error) > 0) {
+        		show_error($data);
+    		}*/
+
+    		function senmdMail()
+    		{
+				$message = "Hello!
+
+						Your contact form has been submitted by:
+
+						First name: $firstName
+						Middle initial: $middleInitial
+						Last name: $lastName
+						E-mail: $email
+						Street: $street
+						City: $city
+						State: $state
+						Zip code: $zip
+						Department: $department
+						Intrests: ". implode(', ', $intrests)."
+						Other comments: $comments
+
+						End of message
+						";
+
+				mail($myemail, "data", $message);
+				mail($ryanEmail, "data", $message);
+			}
+			/*function died($error) {
+   				session_start();
+    			$_SESSION['error'] = $error;
+    			header('Location: index.php');
+   				die();
+			}*/
+
+			/*session_start();
+			if (isset($_SESSION['error']['email'])) {
+    			echo '<input  type="text" class="contact_input error" name="email" maxlength="80" size="30" value="' . $_SESSION['error']['email'] . '">';
+			} else {
+   			// empty input
+			}
+			session_destroy();*/
+
+			/*function show_error($myError)
+			{
+				$Global['firstNameError'] = true;
+			?>
+    			<html>
+    				<body>
+
+   					 <b>Please correct the following error:</b><br />
+   					 <?php echo $myError; ?>
+
+    				</body>
+    			</html>
+			<?php
+			exit();
+			}	*/	
+		?>-->
+
+		
 
 </HTML>

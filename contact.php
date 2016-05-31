@@ -21,9 +21,23 @@
 			$intrests = $_POST['intrest'];
 			$comments = $_POST['extra'];
 
-			if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)){
-    			$error("E-mail address not valid");
+
+			function check_input($data, $problem='')
+			{
+				$data = trim($data);
+    			$data = stripslashes($data);
+   				$data = htmlspecialchars($data);
+   				if($data == NULL){
+   					$Global['error'] = true;
+   				}else{
+   					return $data;
+   				}
 			}
+
+
+			/*if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)){
+    			$error("E-mail address not valid");
+			}*/
 
 /*
 		$firstName = "";
@@ -41,7 +55,7 @@
 <label for="username">Username:</label>
 <input id="username" type="text" value="<?php echo $username; ?>" name="username" title='Username' style="<?php echo $error_css; ?>"/>*/
 
-			function check_input($data, $problem='')
+			/*function check_input($data, $problem='')
 			{
    				$data = trim($data);
     			$data = stripslashes($data);
@@ -54,10 +68,9 @@
 			}
 
 			if (count($error) > 0) {
-        		died($error);
-    		}
+        		show_error($data);
+    		}*/
 
-    		$email_message = "Pranešimas apačioje.\n\n";
 
 			$message = "Hello!
 
@@ -81,23 +94,24 @@
 			mail($myemail, "data", $message);
 			mail($ryanEmail, "data", $message);
 
-			function died($error) {
+			/*function died($error) {
    				session_start();
     			$_SESSION['error'] = $error;
     			header('Location: index.php');
    				die();
-			}
+			}*/
 
-			session_start();
+			/*session_start();
 			if (isset($_SESSION['error']['email'])) {
     			echo '<input  type="text" class="contact_input error" name="email" maxlength="80" size="30" value="' . $_SESSION['error']['email'] . '">';
 			} else {
    			// empty input
 			}
-			session_destroy();
+			session_destroy();*/
 
-			function show_error($myError)
+			/*function show_error($myError)
 			{
+				$Global['firstNameError'] = true;
 			?>
     			<html>
     				<body>
@@ -109,5 +123,7 @@
     			</html>
 			<?php
 			exit();
-			}	
+			}	*/
 		?>
+
+		
