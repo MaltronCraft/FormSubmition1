@@ -208,7 +208,6 @@
 			
 			<?php foreach ($formFields as $field) {
 				if(empty($field['fieldValue'])){
-
 					echo 'Please fill in the following feilds for: ' . $field['fieldLabel'];
 				}
 				//error_log($feilds);
@@ -307,25 +306,25 @@
 		<div>
 			<header id = left>Department</header>
 			<p id = left>
-				<input type="radio" name="department" value="Development" checked> Development<br>
-				<input type="radio" name="department" value="Sales" checked> Sales<br>
-				<input type="radio" name="department" value="Management" checked> Project Management<br>
-				<input type="radio" name="department" value="Design" checked> Design<br>
-				<input type="radio" name="department" value="Marketing" checked> Marketing<br>
-				<input type="radio" name="department" value="SalesBuddy" checked> SalesBuddy<br>
+				<input type="radio" name="department" value="Development" <?php if (isset($department) && $department=="Development") echo "checked";?>> Development<br>
+				<input type="radio" name="department" value="Sales" <?php if (isset($department) && $department=="Sales") echo "checked";?>> Sales<br>
+				<input type="radio" name="department" value="Management" <?php if (isset($department) && $department=="Management") echo "checked";?>> Project Management<br>
+				<input type="radio" name="department" value="Design" <?php if (isset($department) && $department=="Design") echo "checked";?>> Design<br>
+				<input type="radio" name="department" value="Marketing" <?php if (isset($department) && $department=="Marketing") echo "checked";?>> Marketing<br>
+				<input type="radio" name="department" value="SalesBuddy" <?php if (isset($department) && $department=="SalesBuddy") echo "checked";?>> SalesBuddy<br>
 			</p>
 		</div>
 
 		<div>
 			<header id = right>Areas of Intrest</header>
 			<p id = right>	
-				<input type="checkbox" name="intrest[]" value="reading">I like to read.<br>
-				<input type="checkbox" name="intrest[]" value="drawing">I like to draw.<br>
-				<input type="checkbox" name="intrest[]" value="videoGames">I like to play video games.<br>
-				<input type="checkbox" name="intrest[]" value="computers">I like computers.<br>
-				<input type="checkbox" name="intrest[]" value="sports">I like sports.<br>
-				<input type="checkbox" name="intrest[]" value="cars">I like cars.<br>
-				<input type="checkbox" name="intrest[]" value="politics">I like politics.<br>
+				<input type="checkbox" name="intrest[]" value="reading" <?php if(isset($_POST['intrest[reading]'])) echo "checked='checked'"; ?>>I like to read.<br>
+				<input type="checkbox" name="intrest[]" value="drawing" <?php if(isset($_POST['intrest[drawing]'])) echo "checked='checked'"; ?>>I like to draw.<br>
+				<input type="checkbox" name="intrest[]" value="videoGames" <?php if(isset($_POST['intrest[videoGames]'])) echo "checked='checked'"; ?>>I like to play video games.<br>
+				<input type="checkbox" name="intrest[]" value="computers" <?php if(isset($_POST['intrest[computers]'])) echo "checked='checked'"; ?>>I like computers.<br>
+				<input type="checkbox" name="intrest[]" value="sports" <?php if(isset($_POST['intrest[sports]'])) echo "checked='checked'"; ?>>I like sports.<br>
+				<input type="checkbox" name="intrest[]" value="cars" <?php if(isset($_POST['intrest[cars]'])) echo "checked='checked'"; ?>>I like cars.<br>
+				<input type="checkbox" name="intrest[]" value="politics" <?php if(isset($_POST['intrest[politics]'])) echo "checked='checked'"; ?>>I like politics.<br>
 			</p>
 		</div>
 
