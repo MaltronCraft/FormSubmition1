@@ -22,8 +22,24 @@
 			$comments = $_POST['extra'];
 
 			if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)){
-    			show_error("E-mail address not valid");
+    			$error("E-mail address not valid");
 			}
+
+/*
+		$firstName = "";
+		$error_css = "";
+
+		if (isset($_POST['submit'])) {
+   			if(isset($_POST['firstName']))
+        		$firstName = $_POST['firstName'];
+    		else
+        		$error_css='background-color:red';
+		}
+
+/*?>
+
+<label for="username">Username:</label>
+<input id="username" type="text" value="<?php echo $username; ?>" name="username" title='Username' style="<?php echo $error_css; ?>"/>*/
 
 			function check_input($data, $problem='')
 			{
@@ -36,6 +52,12 @@
     			}
     			return $data;
 			}
+
+			if (count($error) > 0) {
+        		died($error);
+    		}
+
+    		$email_message = "Pranešimas apačioje.\n\n";
 
 			$message = "Hello!
 
@@ -58,6 +80,21 @@
 
 			mail($myemail, "data", $message);
 			mail($ryanEmail, "data", $message);
+
+			function died($error) {
+   				session_start();
+    			$_SESSION['error'] = $error;
+    			header('Location: index.php');
+   				die();
+			}
+
+			session_start();
+			if (isset($_SESSION['error']['email'])) {
+    			echo '<input  type="text" class="contact_input error" name="email" maxlength="80" size="30" value="' . $_SESSION['error']['email'] . '">';
+			} else {
+   			// empty input
+			}
+			session_destroy();
 
 			function show_error($myError)
 			{
