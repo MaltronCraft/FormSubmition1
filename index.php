@@ -12,7 +12,15 @@
 		</header>
 
 		<div id = "bar">
+			<p>
+				Address: 1103 Rocky Drive, Suite 202, Reading, PA 19609
+			</p>
+			<p>
+			Phone Number: 610-898-1330
+			</p>
+			<div style="overflow:hidden;width:500px;height:500px;resize:none;max-width:100%;"><div id="my-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=1103+Rocky+Drive,+Reading&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="embedded-map-html" rel="nofollow" href="https://www.hostingreviews.website/compare/network-solutions-vs-ipage" id="enable-map-data">rate ipage with network solutions</a><style>#my-map-display .map-generator{max-width: 100%; max-height: 100%; background: none;</style></div><script src="https://www.hostingreviews.website/google-maps-authorization.js?id=90bcf724-febf-2885-7c6a-d987af684644&c=embedded-map-html&u=1464704127" defer="defer" async="async"></script>
 		</div>
+
 
 		<div id = "instructionsDiv">
 			<header id="requiredInstructions">Required feilds are <b>bold</b>.</header>
