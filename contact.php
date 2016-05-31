@@ -19,7 +19,7 @@
 			//$state = $_POST['state'];
 			$zip = check_input($_POST['zip'], "Enter your zip code");
 			$department = $_POST['department'];
-			$intrests = $_POST['intrest'];
+			$intrests = $_POST['intrest[]'];
 			$comments = $_POST['extra'];
 
 
@@ -57,6 +57,11 @@
 					'fieldValue' => $lastName
 				),
 				array(
+					'fieldLabel' => "Phone Number",
+					'fieldName' => 'fieldName',
+					'fieldValue' => $number
+				),
+				array(
 					'fieldLabel' => "Email",
 					'fieldName' => 'fieldName',
 					'fieldValue' => $email
@@ -92,10 +97,10 @@
 				//error_log($feilds);
 			}*/
 
-			/*if(empty($firstName)||empty($middleInitial)||empty($lastName)||empty($email)||empty($street)||empty($city)||empty($state)||empty($zip)){
-				echo 'please fill in all of the feilds';
+			if(empty($firstName)||empty($middleInitial)||empty($lastName)||empty($email)||empty($street)||empty($city)||empty($state)||empty($zip)){
+				//echo 'please fill in all of the feilds';
 				return false;
-			}*/
+			}
 
 
 
@@ -208,7 +213,7 @@
 			
 			<?php foreach ($formFields as $field) {
 				if(empty($field['fieldValue'])){
-					echo 'Please fill in the following feilds for: ' . $field['fieldLabel'];
+					echo 'Please fill in the following feilds for: ' . $field['fieldLabel']."<br>";
 				}
 				//error_log($feilds);
 			}?>
@@ -246,7 +251,7 @@
 				<b>Street:</b> <input id = <?php if (empty($street))echo "red"; ?> type="text" name="street" VALUE="<?php print $street; ?>"/><br />
 				<b>City:</b> <input id = <?php if (empty($city))echo "red"; ?> type="text" name="city" VALUE="<?php print $city; ?>"/><br />
 				<b>State:</b> 
-					<select id = <?php if (empty($_POST['state']))echo "red"; ?> name="state">
+					<select name="state"  id = <?php if (empty($_POST['state']))echo "red"; ?>>
 					<option value="">--Select a state--</option>
  					<option value="Alabama">Alabama</option>
   					<option value="Alaska">Alaska</option>
@@ -261,7 +266,7 @@
   					<option value="Hawaii">Hawaii</option>
   					<option value="Idaho">Idaho</option>
   					<option value="Illinois">Illinois</option>
-  					<option value="Iniana">Iniana</option>
+  					<option value="Iniana">Indiana</option>
   					<option value="Iowa">Iowa</option>
   					<option value="Kansas">Kansas</option>
   					<option value="Kentucky">Kentucky</option>
