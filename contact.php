@@ -144,7 +144,7 @@
 			<form action= "contact.php"  method="post">
 			
 			<?php foreach ($formFields as $field) {
-				if(empty($field['fieldValue'])){
+				if(empty($field['fieldValue'])&&$_SERVER['REQUEST_METHOD'] == 'POST'){
 					echo 'Please fill in the following feilds for: ' . $field['fieldLabel']."<br>";
 				}
 			}?>
@@ -154,21 +154,21 @@
 
 			<header id = left>Name</header>
 			<p id = left>
-				<b>First Name:</b> <input id = "<?php if (empty($firstName)){echo "red";} ?>" type="text" name="firstName" value="<?php print $firstName; ?>"/><br />
-				<b>Middle Initial:</b> <input  id = "<?php if (empty($middleInitial))echo "red"; ?> type="text" name="middleInitial" VALUE="<?php print $middleInitial; ?>"/><br />
-				<b>Last Name:</b> <input id = "<?php if (empty($lastName))echo "red"; ?> type="text" name="lastName" value="<?php print $lastName; ?>"/><br />
-				<b>Email:</b> <input  id = "<?php if (empty($email))echo "red"; ?>" type="text" name="email" value="<?php print $email; ?>"/><br />
-				<b>Phone Number:</b> <input id = "<?php if (empty($number))echo "red"; ?>" type="text" name="number" value="<?php print $number; ?>"/><br />
+				<b>First Name:</b> <input id = "<?php if (empty($firstName)&&$_SERVER['REQUEST_METHOD'] == 'POST'){echo "red";} ?>" type="text" name="firstName" value="<?php print $firstName; ?>"/><br />
+				<b>Middle Initial:</b> <input  id = "<?php if (empty($middleInitial)&&$_SERVER['REQUEST_METHOD'] == 'POST')echo "red"; ?>" type="text" name="middleInitial" VALUE="<?php print $middleInitial; ?>"/><br />
+				<b>Last Name:</b> <input id = "<?php if (empty($lastName)&&$_SERVER['REQUEST_METHOD'] == 'POST')echo "red"; ?>" type="text" name="lastName" value="<?php print $lastName; ?>"/><br />
+				<b>Email:</b> <input  id = "<?php if (empty($email)&&$_SERVER['REQUEST_METHOD'] == 'POST')echo "red"; ?>" type="text" name="email" value="<?php print $email; ?>"/><br />
+				<b>Phone Number:</b> <input id = "<?php if (empty($number)&&$_SERVER['REQUEST_METHOD'] == 'POST')echo "red"; ?>" type="text" name="number" value="<?php print $number; ?>"/><br />
 			</p>
 		</div>
 
 		<div>
 			<header id = right>Address</header>
 			<p id = right>
-				<b>Street:</b> <input id = "<?php if (empty($street))echo "red"; ?> type="text" name="street" value="<?php print $street; ?>"/><br />
-				<b>City:</b> <input id = "<?php if (empty($city))echo "red"; ?> type="text" name="city" value="<?php print $city; ?>"/><br />
+				<b>Street:</b> <input id = "<?php if (empty($street)&&$_SERVER['REQUEST_METHOD'] == 'POST')echo "red"; ?>" type="text" name="street" value="<?php print $street; ?>"/><br />
+				<b>City:</b> <input id = "<?php if (empty($city)&&$_SERVER['REQUEST_METHOD'] == 'POST')echo "red"; ?>" type="text" name="city" value="<?php print $city; ?>"/><br />
 				<b>State:</b> 
-					<select name="state"  id = <?php if (empty($_POST['state']))echo "red"; ?>>
+					<select name="state"  id = "<?php if (empty($_POST['state'])&&$_SERVER['REQUEST_METHOD'] == 'POST')echo "red"; ?>">
 					<option value="">--Select a state--</option>
  					<option value="Alabama" <?php if($state == 'Alabama') { ?> selected <?php } ?>>Alabama</option>
   					<option value="Alaska" <?php if($state == 'Alaska') { ?> selected <?php } ?>>Alaska</option>
@@ -221,7 +221,7 @@
   					<option value="Wisconsin" <?php if($state == 'Wisconsin') { ?> selected <?php } ?>>Wisconsin</option>
   					<option value="Wyoming" <?php if($state == 'Wyoming') { ?> selected <?php } ?>>Wyoming</option>
 					</select><br />
-				<b>Zip Code:</b> <input id = "<?php if (empty($zip))echo "red"; ?> type="text" name="zip" VALUE="<?php print $zip; ?>"/><br />
+				<b>Zip Code:</b> <input id = "<?php if (empty($zip)&&$_SERVER['REQUEST_METHOD'] == 'POST')echo "red"; ?>" type="text" name="zip" VALUE="<?php print $zip; ?>"/><br />
 			</p>	
 		</div>
 
