@@ -239,13 +239,13 @@
 		<div>
 			<header id = "right">Areas of Intrest</header>
 			<p id = "right">	
-				<input type="checkbox" name="intrest[]" value="reading" <?php (in_array('reading', $$_POST['intrest'])) ? 'checked' : ''; ?>>I like to read.<br>
-				<input type="checkbox" name="intrest[]" value="drawing" <?php (in_array('drawing', $$_POST['intrest'])) ? 'checked' : ''; ?>>I like to draw.<br>
-				<input type="checkbox" name="intrest[]" value="videoGames" <?php if(isset($_POST['videoGames'])) echo "checked='checked'"; ?>>I like to play video games.<br>
-				<input type="checkbox" name="intrest[]" value="computers" <?php if(isset($_POST['computers'])) echo "checked='checked'"; ?>>I like computers.<br>
-				<input type="checkbox" name="intrest[]" value="sports" <?php if(isset($_POST['sports'])) echo "checked='checked'"; ?>>I like sports.<br>
-				<input type="checkbox" name="intrest[]" value="cars" <?php if(isset($_POST['cars'])) echo "checked='checked'"; ?>>I like cars.<br>
-				<input type="checkbox" name="intrest[]" value="politics" <?php if(isset($_POST['politics'])) echo "checked='checked'"; ?>>I like politics.<br>
+				<input type="checkbox" name="intrest[]" value="reading" <?= (in_array('reading', $intrest)) ? 'checked' : ''; ?>>I like to read.<br>
+				<input type="checkbox" name="intrest[]" value="drawing" <?= (in_array('drawing', $intrest)) ? 'checked' : ''; ?>>I like to draw.<br>
+				<input type="checkbox" name="intrest[]" value="videoGames" <?= (in_array('videoGames', $intrest)) ? 'checked' : ''; ?>>I like to play video games.<br>
+				<input type="checkbox" name="intrest[]" value="computers" <?= (in_array('computers', $intrest)) ? 'checked' : ''; ?>>I like computers.<br>
+				<input type="checkbox" name="intrest[]" value="sports" <?= (in_array('sports', $intrest)) ? 'checked' : ''; ?>>I like sports.<br>
+				<input type="checkbox" name="intrest[]" value="cars" <?= (in_array('cars', $intrest)) ? 'checked' : ''; ?>>I like cars.<br>
+				<input type="checkbox" name="intrest[]" value="politics" <?= (in_array('politics', $intrest)) ? 'checked' : ''; ?>>I like politics.<br>
 			</p>
 		</div>
 
