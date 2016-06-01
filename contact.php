@@ -116,7 +116,7 @@
 
 	<body>
 
-		<header id = main>
+		<header id = "main">
 			<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 			Please Fill Out Form
 		</header>
@@ -153,19 +153,19 @@
 
 			<header id = left>Name</header>
 			<p id = left>
-				<b>First Name:</b> <input id = <?php if (empty($firstName)){echo "red";} ?> type="text" name="firstName" VALUE="<?php print $firstName; ?>"/><br />
-				<b>Middle Initial:</b> <input  id = <?php if (empty($middleInitial))echo "red"; ?> type="text" name="middleInitial" VALUE="<?php print $middleInitial; ?>"/><br />
-				<b>Last Name:</b> <input id = <?php if (empty($lastName))echo "red"; ?> type="text" name="lastName" VALUE="<?php print $lastName; ?>"/><br />
-				<b>Email:</b> <input  id = <?php if (empty($email))echo "red"; ?> type="text" name="email" VALUE="<?php print $email; ?>"/><br />
-				<b>Phone Number:</b> <input id = <?php if (empty($number))echo "red"; ?> type="text" name="number" VALUE="<?php print $number; ?>"/><br />
+				<b>First Name:</b> <input id = "<?php if (empty($firstName)){echo "red";} ?>" type="text" name="firstName" value="<?php print $firstName; ?>"/><br />
+				<b>Middle Initial:</b> <input  id = "<?php if (empty($middleInitial))echo "red"; ?> type="text" name="middleInitial" VALUE="<?php print $middleInitial; ?>"/><br />
+				<b>Last Name:</b> <input id = "<?php if (empty($lastName))echo "red"; ?> type="text" name="lastName" value="<?php print $lastName; ?>"/><br />
+				<b>Email:</b> <input  id = "<?php if (empty($email))echo "red"; ?>" type="text" name="email" value="<?php print $email; ?>"/><br />
+				<b>Phone Number:</b> <input id = "<?php if (empty($number))echo "red"; ?>" type="text" name="number" value="<?php print $number; ?>"/><br />
 			</p>
 		</div>
 
 		<div>
 			<header id = right>Address</header>
 			<p id = right>
-				<b>Street:</b> <input id = <?php if (empty($street))echo "red"; ?> type="text" name="street" VALUE="<?php print $street; ?>"/><br />
-				<b>City:</b> <input id = <?php if (empty($city))echo "red"; ?> type="text" name="city" VALUE="<?php print $city; ?>"/><br />
+				<b>Street:</b> <input id = "<?php if (empty($street))echo "red"; ?> type="text" name="street" value="<?php print $street; ?>"/><br />
+				<b>City:</b> <input id = "<?php if (empty($city))echo "red"; ?> type="text" name="city" value="<?php print $city; ?>"/><br />
 				<b>State:</b> 
 					<select name="state"  id = <?php if (empty($_POST['state']))echo "red"; ?>>
 					<option value="">--Select a state--</option>
@@ -220,13 +220,13 @@
   					<option value="Wisconsin" <?php if($state == 'Wisconsin') { ?> selected <?php } ?>>Wisconsin</option>
   					<option value="Wyoming" <?php if($state == 'Wyoming') { ?> selected <?php } ?>>Wyoming</option>
 					</select><br />
-				<b>Zip Code:</b> <input id = <?php if (empty($zip))echo "red"; ?> type="text" name="zip" VALUE="<?php print $zip; ?>"/><br />
+				<b>Zip Code:</b> <input id = "<?php if (empty($zip))echo "red"; ?> type="text" name="zip" VALUE="<?php print $zip; ?>"/><br />
 			</p>	
 		</div>
 
 		<div>
-			<header id = left>Department</header>
-			<p id = left>
+			<header id = "left">Department</header>
+			<p id = "left">
 				<input type="radio" name="department" value="Development" <?php if (isset($department) && $department=="Development") echo "checked";?>> Development<br>
 				<input type="radio" name="department" value="Sales" <?php if (isset($department) && $department=="Sales") echo "checked";?>> Sales<br>
 				<input type="radio" name="department" value="Management" <?php if (isset($department) && $department=="Management") echo "checked";?>> Project Management<br>
@@ -237,8 +237,8 @@
 		</div>
 
 		<div>
-			<header id = right>Areas of Intrest</header>
-			<p id = right>	
+			<header id = "right">Areas of Intrest</header>
+			<p id = "right">	
 				<input type="checkbox" name="intrest[]" value="reading" <?php (in_array('reading', $$_POST['intrest'])) ? 'checked' : ''; ?>>I like to read.<br>
 				<input type="checkbox" name="intrest[]" value="drawing" <?php (in_array('drawing', $$_POST['intrest'])) ? 'checked' : ''; ?>>I like to draw.<br>
 				<input type="checkbox" name="intrest[]" value="videoGames" <?php if(isset($_POST['videoGames'])) echo "checked='checked'"; ?>>I like to play video games.<br>
@@ -250,7 +250,7 @@
 		</div>
 
 		<div>
-			<p id = left>Additional Information: <input type="text" name="extra" VALUE="<?php print $comments; ?>"/><br /></p>
+			<p id = "left">Additional Information: <input type="text" name="extra" value="<?php print $comments; ?>"/><br /></p>
 		</div>
 
 		<div id="submit">
