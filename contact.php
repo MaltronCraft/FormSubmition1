@@ -1,8 +1,9 @@
 <?php
-
+			//Emails to be sent to
 			$myemail  = "mgoldberg@launchdm.com";
 			$ryanEmail  = "ryan@launchdm.com";
 
+			//results
 			$firstName = check_input($_POST['firstName'], "Enter your first name");
 			$middleInitial = check_input($_POST['middleInitial'], "Enter your middle initial");
 			$lastName = check_input($_POST['lastName'], "Enter your last name");
@@ -16,7 +17,7 @@
 			$intrest = $_POST['intrest'];
 			$comments = $_POST['extra'];
 
-
+			//checks to see i required forms filled
 			function check_input($data, $problem=''){
 				$data = trim($data);
     			$data = stripslashes($data);
@@ -28,7 +29,7 @@
    				}
 			}
 
-	
+			//holds info on feilds	
 			$formFields = array(
 				array(
 					'fieldLabel' => "First Name",
@@ -99,6 +100,7 @@
 						End of message
 						";
 			
+			//checks if required feilds filled out and sends out email
 			if(!empty($firstName)&&!empty($middleInitial)&&!empty($lastName)&&!empty($email)&&!empty($number)&&!empty($street)&&!empty($city)&&!empty($state)&&!empty($zip)){
 				//return false;
 				mail($myemail, "data", $message);
@@ -258,8 +260,6 @@
 			<input id="form-submitted" type="hidden" name="formSubmitted" value="true" />
 			<input id="submit" type="submit" value="Submit">
 		</div>	
-
-
 
 		</form>
 

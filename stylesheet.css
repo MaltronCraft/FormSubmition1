@@ -44,15 +44,6 @@ div{
 	clear: left;
 }
 
-/*#left{
-	float: left;
-	clear: left;
-}
-
-#right{
-	float: right;
-	clear: right;
-}*/
 
 #bar{
 	float: right;
@@ -81,15 +72,10 @@ select{
 
 #submit{
 	font-size: 1.5em;
-	/*float: left;
-	clear: left;*/
 	text-align: center;
 	color: #845a0b;
 }
 
-#first{
-	/*background-color: red;*/
-}
 
 #red{
 	background-color: #990000;
