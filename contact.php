@@ -103,6 +103,7 @@
 				//return false;
 				mail($myemail, "data", $message);
 				mail($ryanEmail, "data", $message);
+				echo "Thank you for filling out the form!";
 			}
 
 			
