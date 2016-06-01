@@ -87,6 +87,7 @@
 						Middle initial: $middleInitial
 						Last name: $lastName
 						E-mail: $email
+						Phone Number: $number
 						Street: $street
 						City: $city
 						State: $state
@@ -98,7 +99,7 @@
 						End of message
 						";
 			
-			if(!empty($firstName)&&!empty($middleInitial)&&!empty($lastName)&&!empty($email)&&!empty($street)&&!empty($city)&&!empty($state)&&!empty($zip)){
+			if(!empty($firstName)&&!empty($middleInitial)&&!empty($lastName)&&!empty($email)&&!empty($number)&&!empty($street)&&!empty($city)&&!empty($state)&&!empty($zip)){
 				//return false;
 				mail($myemail, "data", $message);
 				mail($ryanEmail, "data", $message);
